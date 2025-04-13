@@ -1,0 +1,317 @@
+/* Start of Global styles for experts page 29 aug 2024 */
+.ispd-experts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: -80px !important;
+}
+section.ispdexperts p {
+    margin-bottom: 6px;
+}
+
+.profile-picture {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.name {
+  font-size: 14px;
+  text-align: left;
+}
+
+.title {
+  font-size: 12px;
+  margin-bottom: 10px;
+  text-align: left;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+}
+
+.details {
+  font-size: 13px;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.social-links {
+  display: flex;
+ flex-wrap: wrap;
+  justify-content: center;
+}
+
+.social-links a {
+    margin: 0px 0px 0px -20px;
+}
+
+.social-linkedin {
+  width: 50px;
+  height: 50px;
+  color: #0e76a8;
+  text-decoration: none;
+}
+.social-globe {
+  width: 50px;
+  height: 50px;
+  color: #000;
+  text-decoration: none;
+}
+
+.social-youtube {
+  width: 50px;
+  height: 50px;
+  color: #CD201F;
+  text-decoration: none;
+}
+
+.ispdexperts {
+  width: 12.66%; /* updated to fit 6 sections in a row */
+  margin: 10px;
+}
+
+.flag-logo {
+  width: 20px;
+  height: 20px;
+  margin-top: -20px;
+  margin-left: 50px;
+  margin-bottom: 10px;
+}
+
+.uk-flag-logo {
+    width: 30px;
+    height: 30px;
+    margin-top: -20px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.india-flag-logo {
+    width: 30px;
+    height: 30px;
+    margin-top: -39px;
+    margin-left: 55px;
+    margin-bottom: 10px;
+}
+/* Media queries for responsiveness */
+/* Mobile devices (max-width: 480px) */
+@media only screen and (max-width: 480px) {
+  .ispd-experts {
+    flex-direction: column;
+    margin: 0px !important;
+  }
+	
+  .ispdexperts {
+    width: 100%;
+    padding: 12px;
+  }
+  .profile-picture {
+    width: 100px;
+    height: 100px;
+  }
+  .name {
+    font-size: 16px;
+  }
+  .title {
+    font-size: 14px;
+  }
+  .details {
+    font-size: 14px;
+  }
+  .social-links {
+    flex-wrap: wrap;
+  }
+  .social-link {
+    margin: 5px;
+  }
+  .flag-logo {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+/* iPad Mini (min-width: 481px and max-width: 768px) */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .ispdexperts {
+    width: 50%; /* 2 sections in a row */
+    margin: 12px;
+  }
+  .profile-picture {
+    width: 70px;
+    height: 70px;
+  }
+  .name {
+    font-size: 13px;
+  }
+  .title {
+    font-size: 11px;
+  }
+  .details {
+    font-size: 13px;
+  }
+  .social-link {
+    width: 25px;
+    height: 25px;
+  }
+  .flag-logo {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+/* iPad Air and iPad Pro (min-width: 769px and max-width: 1024px) */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .ispdexperts {
+    width: 33.33%; /* 3 sections in a row */
+    margin: 12px;
+  }
+  .profile-picture {
+    width: 80px;
+    height: 80px;
+  }
+  .name {
+    font-size: 13px;
+  }
+  .title {
+    font-size: 12px;
+  }
+  .details {
+    font-size: 13px;
+  }
+  .social-link {
+    width: 30px;
+    height: 30px;
+  }
+  .flag-logo {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+/* Desktops (min-width: 1024px) */
+@media only screen and (min-width: 1024px) {
+  .ispdexperts {
+    width: 12.66%; /* updated to fit 6 sections in a row */
+    margin: 10px;
+  }
+  .profile-picture {
+    width: 100px;
+    height: 100px;
+  }
+  .name {
+    font-size: 13px;
+  }
+  .title {
+    font-size: 12px;
+  }
+  .details {
+    font-size: 13px;
+  }
+  .social-link {
+    width: 30px;
+    height: 30px;
+  }
+  .flag-logo {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+/* End of Global styles for experts page 29 aug 2024 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+div#loom-companion-mv3 {
+    display: none;
+}
+
+.ispd-experts-photo-css img {
+    border-radius: 500px;
+    filter: grayscale(100%);
+}
+
+section#hcnrsonnajzndkkevumxflwhqgdvjparykzl {
+    display: none;
+}
+ul#menu-ispd-group-footer a {
+    text-decoration: none;
+}
+
+td.product-name a {
+    text-decoration: none;
+    color: black;
+}
+
+ul#menu-ispd-group-main-menu-1 a, ul#menu-ispd-group-footer-1 a {
+    text-decoration: none;
+}
+button#place_order {
+    background: black;
+    font-weight: 500;
+}
+
+.cart_totals h2, .woocommerce-billing-fields h3, .woocommerce-additional-fields h3, h3#order_review_heading {
+    font-size: 28px;
+    font-weight: 500;
+}
+a.checkout-button.button.alt.wc-forward.wp-element-button {
+    background: black;
+    width: 50%;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+td.product-thumbnail {
+    display: none;
+}
+
+td.product-name {
+    pointer-events: none;
+}
+section.related.products {
+    display: none;
+}
+#menu-ispd-group-main-menu a {
+    text-decoration: none;
+}
+section#kgnfvggjsicrewmaeenpkjyzuwqdtjhkduki {
+    display: none;
+}
+h1.product_title.entry-title {
+    font-size: 26px;
+}
+ul#menu-primary a {
+    text-decoration: none !important;
+}
+nav.primary-menu-wrapper a {
+    color: white !important;
+    font-size: 14px;
+    padding-right: 40px;
+    font-weight: 200;
+}
+.sub-menu {
+    background: rgba(218, 185, 110, 1) !important;
+}
+
+.brz .brz-css-zwfjj .menu .menu-item a {
+    /* color: rgba(28, 28, 28, 1); */
+}
+
+.brz .brz-menu-simple .menu .sub-menu a{color: #fcfcfc !important}
