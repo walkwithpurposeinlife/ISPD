@@ -1,331 +1,95 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title> ISPD EXPERTS </title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ISPD EXPERTS</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+    }
+    .ispd-experts {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .ispdexperts {
+      background-color: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      max-width: 320px;
+      width: 100%;
+      box-sizing: border-box;
+      transition: transform 0.3s;
+    }
+    .ispdexperts:hover {
+      transform: translateY(-5px);
+    }
+    .profile-picture {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      margin: 0 auto 10px;
+    }
+    .flag-logo {
+      width: 30px;
+      height: 30px;
+      display: block;
+      margin: -10px auto 10px;
+    }
+    .name {
+      font-size: 16px;
+      font-weight: bold;
+      text-align: center;
+    }
+    .title {
+      font-size: 14px;
+      font-style: italic;
+      text-align: center;
+      display: block;
+      margin-bottom: 10px;
+      color: #555;
+    }
+    .details {
+      font-size: 13px;
+      line-height: 1.5;
+      color: #333;
+    }
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .social-links a {
+      font-size: 20px;
+      color: #444;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .social-links a:hover {
+      color: #000;
+    }
+    @media only screen and (max-width: 768px) {
+      .ispdexperts {
+        max-width: 90%;
+      }
+    }
+  </style>
 </head>
-<style>
-/* Start of Global styles for experts page 29 aug 2024 */
-.ispd-experts {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: -80px !important;
-}
-section.ispdexperts p {
-    margin-bottom: 6px;
-}
-
-.profile-picture {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-}
-
-.name {
-  font-size: 14px;
-  text-align: left;
-}
-
-.title {
-  font-size: 12px;
-  margin-bottom: 10px;
-  text-align: left;
-  line-height: 1.6;
-  letter-spacing: 0.5px;
-}
-
-.details {
-  font-size: 13px;
-  line-height: 1.5;
-  text-align: left;
-}
-
-.social-links {
-  display: flex;
- flex-wrap: wrap;
-  justify-content: center;
-}
-
-.social-links a {
-    margin: 0px 0px 0px -20px;
-}
-
-.social-linkedin {
-  width: 50px;
-  height: 50px;
-  color: #0e76a8;
-  text-decoration: none;
-}
-.social-globe {
-  width: 50px;
-  height: 50px;
-  color: #000;
-  text-decoration: none;
-}
-
-.social-youtube {
-  width: 50px;
-  height: 50px;
-  color: #CD201F;
-  text-decoration: none;
-}
-
-.ispdexperts {
-  width: 12.66%; /* updated to fit 6 sections in a row */
-  margin: 10px;
-}
-
-.flag-logo {
-  width: 20px;
-  height: 20px;
-  margin-top: -20px;
-  margin-left: 50px;
-  margin-bottom: 10px;
-}
-
-.uk-flag-logo {
-    width: 30px;
-    height: 30px;
-    margin-top: -20px;
-    margin-left: 20px;
-    margin-bottom: 10px;
-}
-
-.india-flag-logo {
-    width: 30px;
-    height: 30px;
-    margin-top: -39px;
-    margin-left: 55px;
-    margin-bottom: 10px;
-}
-/* Media queries for responsiveness */
-/* Mobile devices (max-width: 480px) */
-@media only screen and (max-width: 480px) {
-  .ispd-experts {
-    flex-direction: column;
-    margin: 0px !important;
-  }
-	
-  .ispdexperts {
-    width: 100%;
-    padding: 12px;
-  }
-  .profile-picture {
-    width: 100px;
-    height: 100px;
-  }
-  .name {
-    font-size: 16px;
-  }
-  .title {
-    font-size: 14px;
-  }
-  .details {
-    font-size: 14px;
-  }
-  .social-links {
-    flex-wrap: wrap;
-  }
-  .social-link {
-    margin: 5px;
-  }
-  .flag-logo {
-    width: 30px;
-    height: 30px;
-  }
-}
-
-/* iPad Mini (min-width: 481px and max-width: 768px) */
-@media only screen and (min-width: 481px) and (max-width: 768px) {
-  .ispdexperts {
-    width: 50%; /* 2 sections in a row */
-    margin: 12px;
-  }
-  .profile-picture {
-    width: 70px;
-    height: 70px;
-  }
-  .name {
-    font-size: 13px;
-  }
-  .title {
-    font-size: 11px;
-  }
-  .details {
-    font-size: 13px;
-  }
-  .social-link {
-    width: 25px;
-    height: 25px;
-  }
-  .flag-logo {
-    width: 18px;
-    height: 18px;
-  }
-}
-
-/* iPad Air and iPad Pro (min-width: 769px and max-width: 1024px) */
-@media only screen and (min-width: 769px) and (max-width: 1024px) {
-  .ispdexperts {
-    width: 33.33%; /* 3 sections in a row */
-    margin: 12px;
-  }
-  .profile-picture {
-    width: 80px;
-    height: 80px;
-  }
-  .name {
-    font-size: 13px;
-  }
-  .title {
-    font-size: 12px;
-  }
-  .details {
-    font-size: 13px;
-  }
-  .social-link {
-    width: 30px;
-    height: 30px;
-  }
-  .flag-logo {
-    width: 30px;
-    height: 30px;
-  }
-}
-
-/* Desktops (min-width: 1024px) */
-@media only screen and (min-width: 1024px) {
-  .ispdexperts {
-    width: 12.66%; /* updated to fit 6 sections in a row */
-    margin: 10px;
-  }
-  .profile-picture {
-    width: 100px;
-    height: 100px;
-  }
-  .name {
-    font-size: 13px;
-  }
-  .title {
-    font-size: 12px;
-  }
-  .details {
-    font-size: 13px;
-  }
-  .social-link {
-    width: 30px;
-    height: 30px;
-  }
-  .flag-logo {
-    width: 30px;
-    height: 30px;
-  }
-}
-
-/* End of Global styles for experts page 29 aug 2024 */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-div#loom-companion-mv3 {
-    display: none;
-}
-
-.ispd-experts-photo-css img {
-    border-radius: 500px;
-    filter: grayscale(100%);
-}
-
-section#hcnrsonnajzndkkevumxflwhqgdvjparykzl {
-    display: none;
-}
-ul#menu-ispd-group-footer a {
-    text-decoration: none;
-}
-
-td.product-name a {
-    text-decoration: none;
-    color: black;
-}
-
-ul#menu-ispd-group-main-menu-1 a, ul#menu-ispd-group-footer-1 a {
-    text-decoration: none;
-}
-button#place_order {
-    background: black;
-    font-weight: 500;
-}
-
-.cart_totals h2, .woocommerce-billing-fields h3, .woocommerce-additional-fields h3, h3#order_review_heading {
-    font-size: 28px;
-    font-weight: 500;
-}
-a.checkout-button.button.alt.wc-forward.wp-element-button {
-    background: black;
-    width: 50%;
-    font-size: 16px;
-    font-weight: 500;
-}
-
-td.product-thumbnail {
-    display: none;
-}
-
-td.product-name {
-    pointer-events: none;
-}
-section.related.products {
-    display: none;
-}
-#menu-ispd-group-main-menu a {
-    text-decoration: none;
-}
-section#kgnfvggjsicrewmaeenpkjyzuwqdtjhkduki {
-    display: none;
-}
-h1.product_title.entry-title {
-    font-size: 26px;
-}
-ul#menu-primary a {
-    text-decoration: none !important;
-}
-nav.primary-menu-wrapper a {
-    color: white !important;
-    font-size: 14px;
-    padding-right: 40px;
-    font-weight: 200;
-}
-.sub-menu {
-    background: rgba(218, 185, 110, 1) !important;
-}
-
-.brz .brz-css-zwfjj .menu .menu-item a {
-    /* color: rgba(28, 28, 28, 1); */
-}
-
-.brz .brz-menu-simple .menu .sub-menu a{color: #fcfcfc !important}
-</style>
 <body>
-<div class="ispd-experts">
-  <section class="ispdexperts">
+  <h1 style="text-align: center; margin-bottom: 30px;">ISPD EXPERTS</h1>
+  <div class="ispd-experts">
+<section class="ispdexperts">
     <img src="https://www.ispdnetwork.org/wp-content/uploads/2023/06/Ines-Piers.jpg" alt="Profile Picture" class="profile-picture">
     <img src="https://www.ispdnetwork.org/wp-content/uploads/2023/06/Portugal.webp" alt="flag" class="flag-logo" width="30" height="30">
     <div class="name"><b>Ines Pires,</b> <em class="title">phD Research, MA, BA, Prof. h.c. Dr. h.c. of International Business Strategy (CCU/USA), ISPD Group President</em></div>
@@ -345,7 +109,7 @@ nav.primary-menu-wrapper a {
   </div>
     </div>
   </section>
-  <section class="ispdexperts">
+<section class="ispdexperts">
     <img src="https://www.ispdnetwork.org/wp-content/uploads/2023/06/Thomas-Sladko-1.jpg" alt="Profile Picture" class="profile-picture">
     <img src="https://www.ispdnetwork.org/wp-content/uploads/2023/06/Austria-Flag-1.webp" alt="flag" class="flag-logo" width="30" height="30">
     <div class="name"><b>Thomas Sladko,</b> <em class="title">MA, Mag. phil, Prof. HC and Dr. HC of soft diplomacy (CCU/USA), ISPD Group Advisor, Expert and Author</em></div>
@@ -363,7 +127,7 @@ nav.primary-menu-wrapper a {
     <a href="https://www.ispdnetwork.org/" class="social-globe"><i class="fas fa-globe"></i></a>  
     </div>
   </section>
-  <section class="ispdexperts">
+<section class="ispdexperts">
     <img src="https://www.ispdnetwork.org/wp-content/uploads/2023/06/Vazil.jpg" alt="Profile Picture" class="profile-picture">
     <img src="https://www.ispdnetwork.org/wp-content/uploads/2023/06/Slovenia.webp" alt="flag" class="flag-logo" width="30" height="30">
     <div class="name"><b>Vazil Hudak,</b> <em class="title">MBA, MA, Former Minister, Former International Organisation leader and ISPD Group Advisor, Expert and Consultant </em></div>
@@ -382,7 +146,7 @@ nav.primary-menu-wrapper a {
     <a href="https://avanea.com/" class="social-globe"><i class="fas fa-globe"></i></a> 
     </div>
   </section>
-  <section class="ispdexperts">
+<section class="ispdexperts">
     <img src="https://www.ispdnetwork.org/wp-content/uploads/2023/06/Manfred-Wandner-ISPD-expert.jpg" alt="Profile Picture" class="profile-picture">
     <img src="https://www.ispdnetwork.org/wp-content/uploads/2023/06/Germany.webp" alt="flag" class="flag-logo" width="30" height="30">
     <div class="name"><b>Manfred Wandner,</b> <em class="title">BA Physics, Geography and Sports Medicine, Founder of Kids Network | ISPD+ Group Community Director</em></div>
@@ -396,7 +160,7 @@ nav.primary-menu-wrapper a {
       <a href="https://www.linkedin.com/in/manfred-p-wandner-95851799/" class="social-linkedin"><i class="fab fa-linkedin"></i></a> 
     </div>
   </section>
-  <section class="ispdexperts">
+<section class="ispdexperts">
     <img src="https://www.ispdnetwork.org/wp-content/uploads/2024/03/Marco-Illy.png" alt="Profile Picture" class="profile-picture">
     <img src="https://www.ispdnetwork.org/wp-content/uploads/2023/06/Switzerland.webp" alt="flag" class="flag-logo" width="30" height="30">
     <div class="name"><b>Marco Illy</b> <em class="title">BA, MBA, Former Credit Suisse Head of Investment Banking,  ISPD Group Associate</em></div>
@@ -413,7 +177,7 @@ nav.primary-menu-wrapper a {
        <a href="https://www.linkedin.com/in/marco-illy-8485b8205/?originalSubdomain=ch" class="social-linkedin"><i class="fab fa-linkedin"></i></a>
     </div>
   </section>
-  <section class="ispdexperts">
+<section class="ispdexperts">
     <img src="https://www.ispdnetwork.org/wp-content/uploads/2024/09/PHOTO-2024-09-07-16-19-51.jpg" alt="Profile Picture" class="profile-picture">
     <img src="https://www.ispdnetwork.org/wp-content/uploads/2023/06/Germany.webp" alt="flag" class="flag-logo" width="30" height="30">
     <div class="name"><b>Jonny Bakos,</b> <em class="title">Mathematical Economist</em></div>
@@ -426,18 +190,7 @@ nav.primary-menu-wrapper a {
        <a href="https://jbbrl.com/" class="social-globe"><i class="fas fa-globe"></i></a>
     </div>
   </section>
-</div>
-</body>
-</html>
-<!DOCTYPE html>
-<html>
-<head>
-  <title> ISPD EXPERTS </title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-</head>
-<body>
-<div class="ispd-experts">
-  <section class="ispdexperts">
+<section class="ispdexperts">
     <img src="https://www.ispdnetwork.org/wp-content/uploads/2024/09/Alejandro-Esteban.png" alt="Profile Picture" class="profile-picture">
     <img src="https://www.ispdnetwork.org/wp-content/uploads/2023/06/Spain.webp" alt="flag" class="flag-logo" width="30" height="30">
     <div class="name"><b>Alejandro J. Esteban,</b> <em class="title">BSc, MBA, and ISPD Group Impact International Commercial Services Shareholder Partner, Ometepe Oman Madrid Founder and shareholder</em></div>
@@ -452,7 +205,7 @@ nav.primary-menu-wrapper a {
      <a href="https://www.linkedin.com/in/alejandro-j-esteban-ba85646b/" class="social-linkedin"><i class="fab fa-linkedin"></i></a>
     </div>
   </section>
-  <section class="ispdexperts">
+<section class="ispdexperts">
     <img src="https://www.ispdnetwork.org/wp-content/uploads/2023/06/Jorge-satiago.jpg" alt="Profile Picture" class="profile-picture">
     <img src="https://www.ispdnetwork.org/wp-content/uploads/2023/06/Spain.webp" alt="flag" class="flag-logo" width="30" height="30">
     <div class="name"><b>Jorge Santiago,</b> <em class="title">PhD in Political Communications, Director at UCJC and ISPD Group Expert and Consultant</em></div>
@@ -469,7 +222,7 @@ nav.primary-menu-wrapper a {
   </div>
     </div>
   </section>
-   <section class="ispdexperts">
+<section class="ispdexperts">
     <img src="https://www.ispdnetwork.org/wp-content/uploads/2024/09/Joel.png" alt="Profile Picture" class="profile-picture">
     <img src="https://www.ispdnetwork.org/wp-content/uploads/2023/06/United-States.webp" alt="flag" class="flag-logo" width="30" height="30">
     <div class="name"><b>Joel Rowland,</b><em class="title">MBA, Fintech, ISPD Group Associate,  Expert and Consultant</em></div>
@@ -485,7 +238,7 @@ nav.primary-menu-wrapper a {
        <a href="https://www.linkedin.com/in/joel-rowland-059b4051/" class="social-linkedin"><i class="fab fa-linkedin"></i></a>
     </div>
   </section>
-  <section class="ispdexperts">
+<section class="ispdexperts">
     <img src="https://www.ispdnetwork.org/wp-content/uploads/2023/06/Ernesto.jpg" alt="Profile Picture" class="profile-picture">
     <img src="https://www.ispdnetwork.org/wp-content/uploads/2023/06/Colombia.webp" alt="flag" class="flag-logo" width="30" height="30">
     <div class="name"><b>Ernesto Samper,</b> <em class="title"> LLB, Former Head of State and ISPD Group Expert and Consultant</em></div>
@@ -502,7 +255,7 @@ nav.primary-menu-wrapper a {
      <a href="https://www.linkedin.com/in/ernesto-samper-00473763/" class="social-linkedin"><i class="fab fa-linkedin"></i></a>
     </div>
   </section>
-  <section class="ispdexperts">
+<section class="ispdexperts">
     <img src="https://www.ispdnetwork.org/wp-content/uploads/2023/06/Bruno-SMETS.jpg" alt="Profile Picture" class="profile-picture">
     <img src="https://www.ispdnetwork.org/wp-content/uploads/2023/06/Belgium-Flag.webp" alt="flag" class="flag-logo" width="30" height="30">
     <div class="name"><b>Bruno Smets,</b> <em class="title"> Commander, Armed Forces, ISPD Group Expert and Consultant</em></div>
@@ -517,7 +270,7 @@ nav.primary-menu-wrapper a {
      <a href="https://www.linkedin.com/in/bruno-smets-colonel-gs-e-r-726a4b23/" class="social-linkedin"><i class="fab fa-linkedin"></i></a>
     </div>
   </section>
-  <section class="ispdexperts">
+<section class="ispdexperts">
     <img src="https://www.ispdnetwork.org/wp-content/uploads/2023/06/Carlos-Mesa.jpg" alt="Profile Picture" class="profile-picture">
     <img src="https://www.ispdnetwork.org/wp-content/uploads/2023/06/Bolivia-Flag.webp" alt="flag" class="flag-logo" width="30" height="30">
     <div class="name"><b>Carlos Mesa,</b><em class="title">BA, Former Head of State and ISPD Group Expert and Consultant</em></div>
@@ -532,18 +285,7 @@ nav.primary-menu-wrapper a {
       <a href="https://www.linkedin.com/in/carlos-de-mesa-gisbert-60275a37/" class="social-linkedin"><i class="fab fa-linkedin"></i></a> 
     </div>
   </section>
-</div>
-</body>
-</html>
-<!DOCTYPE html>
-<html>
-<head>
-  <title> ISPD EXPERTS </title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-</head>
-<body>
-<div class="ispd-experts">
-  <section class="ispdexperts">
+<section class="ispdexperts">
     <img src="https://www.ispdnetwork.org/wp-content/uploads/2023/06/Vicente.jpg" alt="Profile Picture" class="profile-picture">
     <img src="https://www.ispdnetwork.org/wp-content/uploads/2024/09/Mexico.png" alt="flag" class="flag-logo" width="30" height="30">
     <div class="name"><b>Vicente Fox,</b> <em class="title">BA, Certificate in management skills, Former Head of State and ISPD Group Expert and Consultant</em></div>
@@ -559,7 +301,7 @@ nav.primary-menu-wrapper a {
        <a href="https://www.linkedin.com/in/vicente-fox-quesada-629b9690/" class="social-linkedin"><i class="fab fa-linkedin"></i></a>
     </div>
   </section>
-  <section class="ispdexperts">
+<section class="ispdexperts">
     <img src="https://www.ispdnetwork.org/wp-content/uploads/2023/06/Captain-Jose-Paulo-Lucena.jpg" alt="Profile Picture" class="profile-picture">
     <img src="https://www.ispdnetwork.org/wp-content/uploads/2023/06/Portugal.webp" alt="flag" class="flag-logo" width="30" height="30">
     <div class="name"><b>Jose Paulo Lucena,</b> <em class="title">Captain, Bachelor's in Military Naval Sciences, Specialized in Communications and Electronic Warfare, ISPD Group Expert and Consultant</em></div>
@@ -576,7 +318,7 @@ nav.primary-menu-wrapper a {
   </div>
     </div>
   </section>
-  <section class="ispdexperts">
+<section class="ispdexperts">
     <img src="https://www.ispdnetwork.org/wp-content/uploads/2023/06/Nasr.jpg" alt="Profile Picture" class="profile-picture">
     <img src="https://www.ispdnetwork.org/wp-content/uploads/2023/06/Oman.webp" alt="flag" class="flag-logo" width="30" height="30">
     <div class="name"><b>Nasr Al Hosni, </b> <em class="title">MA, Former Minister, Former International Organisation leader and ISPD Group Kamzar Invesment LLC Oman Chairman</em></div>
@@ -595,7 +337,7 @@ nav.primary-menu-wrapper a {
      <a href="https://www.linkedin.com/in/nasr-amur-shuwain-al-hosni-a339b43a/" class="social-linkedin"><i class="fab fa-linkedin"></i></a>
     </div>
   </section>
-  <section class="ispdexperts">
+<section class="ispdexperts">
     <img src="https://www.ispdnetwork.org/wp-content/uploads/2023/06/Luis-Alberto-Lacalle.jpg" alt="Profile Picture" class="profile-picture">
     <img src="https://www.ispdnetwork.org/wp-content/uploads/2023/06/Uruguay.webp" alt="flag" class="flag-logo" width="30" height="30">
     <div class="name"><b>Luis Alberto Lacalle,</b> <em class="title">LLB, Former Head of State and ISPD Group Expert and Consultant</em></div>
@@ -611,7 +353,7 @@ nav.primary-menu-wrapper a {
      <a href="https://www.gub.uy/presidencia/" class="social-globe"><i class="fas fa-globe"></i></a>
     </div>
   </section>
-  <section class="ispdexperts">
+<section class="ispdexperts">
     <img src="https://www.ispdnetwork.org/wp-content/uploads/2023/06/Tilo.jpg" alt="Profile Picture" class="profile-picture">
     <img src="https://www.ispdnetwork.org/wp-content/uploads/2023/06/Germany.webp" alt="flag" class="flag-logo" width="30" height="30">
     <div class="name"><b>Tilo Ploeger,</b> <em class="title"> BA, Former Multinational Chief Executive Officer, Alchemist for the stars Bruce Willis, Karolina Kurkova, Boris Becker among others and ISPD Group Associate and Expert</em></div>
@@ -628,7 +370,7 @@ nav.primary-menu-wrapper a {
       <a href="https://www.linkedin.com/in/tilo-ploeger-3694614/" class="social-linkedin"><i class="fab fa-linkedin"></i></a> 
     </div>
   </section>
-  <section class="ispdexperts">
+<section class="ispdexperts">
     <img src="https://www.ispdnetwork.org/wp-content/uploads/2023/06/Eduardo-Duhalde.jpg" alt="Profile Picture" class="profile-picture">
     <img src="https://www.ispdnetwork.org/wp-content/uploads/2023/06/Argentina-Flag.webp" alt="flag" class="flag-logo" width="30" height="30">
     <div class="name"><b>Eduardo Duhalde</b> <em class="title">LLB, Former Head of State and ISPD Group Expert and Consultant</em></div>
@@ -643,18 +385,7 @@ nav.primary-menu-wrapper a {
        <a href="https://www.linkedin.com/in/eduardoduhalde/" class="social-linkedin"><i class="fab fa-linkedin"></i></a>
     </div>
   </section>
-</div>
-</body>
-</html>
-<!DOCTYPE html>
-<html>
-<head>
-  <title> ISPD EXPERTS </title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-</head>
-<body>
-<div class="ispd-experts">
-  <section class="ispdexperts">
+<section class="ispdexperts">
     <img src="https://www.ispdnetwork.org/wp-content/uploads/2023/06/Paul.jpg" alt="Profile Picture" class="profile-picture">
     <img src="https://www.ispdnetwork.org/wp-content/uploads/2024/01/United-Kingdom.webp" alt="flag" class="flag-logo" width="30" height="30">
     <div class="name"><b>Paul Pearson</b> <em class="title">HND in Hotel Management, ISPD Group Expert and Consultant</em></div>
@@ -668,7 +399,7 @@ nav.primary-menu-wrapper a {
        <a href="https://www.linkedin.com/in/paul-pearson-137aa514/" class="social-linkedin"><i class="fab fa-linkedin"></i></a>
     </div>
   </section>
-  <section class="ispdexperts">
+<section class="ispdexperts">
     <img src="https://www.ispdnetwork.org/wp-content/uploads/2023/01/Phillipa-Lawrence.jpeg" alt="Profile Picture" class="profile-picture">
     <img src="https://www.ispdnetwork.org/wp-content/uploads/2023/06/Jamaica.webp" alt="flag" class="flag-logo" width="30" height="30">
     <div class="name"><b>Phillipa Dianne Lawrence,</b> <em class="title">BA, M.Sc. Former Chief of Protocol UN, Caricom, ISPD Group Expert and Consultant</em></div>
@@ -686,7 +417,7 @@ nav.primary-menu-wrapper a {
   </div>
     </div>
   </section>
-  <section class="ispdexperts">
+<section class="ispdexperts">
     <img src="https://www.ispdnetwork.org/wp-content/uploads/2023/06/Sultan-ESMAIL-MBA.jpg" alt="Profile Picture" class="profile-picture">
     <img src="https://www.ispdnetwork.org/wp-content/uploads/2023/06/Senegal.webp" alt="flag" class="flag-logo" width="30" height="30">
     <div class="name"><b>Sultan ESMAIL,</b> <em class="title"> MBA, Engineer and Amnistrator, ISPD Group Investor, Expert and Consultant</em></div>
@@ -700,7 +431,7 @@ nav.primary-menu-wrapper a {
      <a href="https://www.linkedin.com/in/sultan-esmail-15208b176/" class="social-linkedin"><i class="fab fa-linkedin"></i></a>
     </div>
   </section>
-  <section class="ispdexperts">
+<section class="ispdexperts">
     <img src="https://www.ispdnetwork.org/wp-content/uploads/2023/06/Sharifa-Al-Yahi.jpg" alt="Profile Picture" class="profile-picture">
     <img src="https://www.ispdnetwork.org/wp-content/uploads/2023/06/Oman.webp" alt="flag" class="flag-logo" width="30" height="30">
     <div class="name"><b>Sharifa Al Yahi,</b> <em class="title">BA, MA, Fomer Minister, ISPD Group Expert and Consultant</em></div>
@@ -715,7 +446,7 @@ nav.primary-menu-wrapper a {
 <p class="details">• Former Member of Advisory Board in University of Business &amp; Technology- Jeddah</p>
 
   </section>
-  <section class="ispdexperts">
+<section class="ispdexperts">
     <img src="https://www.ispdnetwork.org/wp-content/uploads/2023/06/Jamil-Mahuad.jpg" alt="Profile Picture" class="profile-picture">
     <img src="https://www.ispdnetwork.org/wp-content/uploads/2023/06/Ecuador.webp" alt="flag" class="flag-logo" width="30" height="30">
     <div class="name"><b>Jamil Mahuad,</b> <em class="title">BA, MA, MPA, WWF’s Gift to the Earth Award, Nobel Peace Prize Nominee, Former Head of State, ISPD Group Expert and Consultant</em></div>
@@ -730,7 +461,7 @@ nav.primary-menu-wrapper a {
       <a href="https://en.wikipedia.org/wiki/Jamil_Mahuad" class="social-globe"><i class="fas fa-globe"></i></a>
     </div>
   </section>
-  <section class="ispdexperts">
+<section class="ispdexperts">
     <img src="https://www.ispdnetwork.org/wp-content/uploads/2023/06/Marianne-Zahnd.jpg" alt="Profile Picture" class="profile-picture">
     <img src="https://www.ispdnetwork.org/wp-content/uploads/2023/06/Switzerland.webp" alt="flag" class="flag-logo" width="30" height="30">
     <div class="name"><b>Marianne Zahnd,</b> <em class="title">BA, Certified in Event management and Protocol, Former head of Protocol, ISPD Group Expert and Consultant</em></div>
@@ -744,19 +475,7 @@ nav.primary-menu-wrapper a {
        <a href="https://www.linkedin.com/in/marianne-zahnd-39a64b/" class="social-linkedin"><i class="fab fa-linkedin"></i></a>
     </div>
   </section>
-  
-</div>
-</body>
-</html>
-<!DOCTYPE html>
-<html>
-<head>
-  <title> ISPD EXPERTS </title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-</head>
-<body>
-<div class="ispd-experts">
-  <section class="ispdexperts">
+<section class="ispdexperts">
     <img src="https://www.ispdnetwork.org/wp-content/uploads/2023/06/Rafael-Abelha-Santos.jpg" alt="Profile Picture" class="profile-picture">
     <img src="https://www.ispdnetwork.org/wp-content/uploads/2023/06/Portugal.webp" alt="flag" class="flag-logo" width="30" height="30">
     <div class="name"><b>Rafael Abelha Santos,</b> <em class="title">PG Innovation &amp; Strategy, Founder</em></div>
@@ -772,7 +491,7 @@ nav.primary-menu-wrapper a {
        <a href="https://www.stergy.eu/oman/" class="social-globe"><i class="fas fa-globe"></i></a>
     </div>
   </section>
-   <section class="ispdexperts">
+<section class="ispdexperts">
     <img src="https://www.ispdnetwork.org/wp-content/uploads/2023/06/Luis-Ritto.jpg" alt="Profile Picture" class="profile-picture">
     <img src="https://www.ispdnetwork.org/wp-content/uploads/2023/06/Portugal.webp" alt="flag" class="flag-logo" width="30" height="30">
     <div class="name"><b>Luis Ritto,</b> <em class="title">PhD, Former EU Ambassador to the Holy See, Order of Malta and FAO, Emeritus Professor of the ISPD Protocol and Diplomacy by ISPD Group</em></div>
@@ -785,7 +504,7 @@ nav.primary-menu-wrapper a {
        <a href="https://www.linkedin.com/in/luis-ritto-87b0042a/" class="social-linkedin"><i class="fab fa-linkedin"></i></a>
     </div>
   </section>
-  <section class="ispdexperts">
+<section class="ispdexperts">
     <img src="https://www.ispdnetwork.org/wp-content/uploads/2023/06/VALENTINA-KECMAN.jpg" alt="Profile Picture" class="profile-picture">
     <img src="https://www.ispdnetwork.org/wp-content/uploads/2024/09/Bosnia-and-Herzegovina.png" alt="flag" class="flag-logo" width="30" height="30">
     <div class="name"><b>Valentina Kecman,</b> <em class="title">BA, MA, Ph.D. in Diplomacy, Advisor to the CEO at Airports of Republic of Srpska, ISPD Group Expert and Consultant</em></div>
@@ -804,7 +523,7 @@ nav.primary-menu-wrapper a {
   </div>
     </div>
   </section>
-  <section class="ispdexperts">
+<section class="ispdexperts">
     <img src="https://www.ispdnetwork.org/wp-content/uploads/2023/06/Nicanor-Duarte.jpg" alt="Profile Picture" class="profile-picture">
     <img src="https://www.ispdnetwork.org/wp-content/uploads/2023/06/Paraguay.webp" alt="flag" class="flag-logo" width="30" height="30">
     <div class="name"><b>Nicanor Duarte,</b><em class="title">MA, LLB, Former Head of State, former Minister, ISPD Group Expert and Consultant</em></div>
@@ -819,7 +538,7 @@ nav.primary-menu-wrapper a {
     <a href="https://en.wikipedia.org/wiki/Nicanor_Duarte" class="social-globe"><i class="fas fa-globe"></i></a>
     </div>
   </section>
-  <section class="ispdexperts">
+<section class="ispdexperts">
     <img src="https://www.ispdnetwork.org/wp-content/uploads/2023/06/Patricia-Benoit.jpg" alt="Profile Picture" class="profile-picture">
     <img src="https://www.ispdnetwork.org/wp-content/uploads/2023/06/Switzerland.webp" alt="flag" class="flag-logo" width="30" height="30">
     <div class="name"><b>Patricia Benoit-Guyot,</b></div>
@@ -836,7 +555,7 @@ nav.primary-menu-wrapper a {
 <a href="https://www.linkedin.com/in/patricia-benoit-guyot-89420827/" class="social-linkedin"><i class="fab fa-linkedin"></i></a>
 </div>
   </section>
-  <section class="ispdexperts">
+<section class="ispdexperts">
     <img src="https://www.ispdnetwork.org/wp-content/uploads/2023/06/Dr.-Raymond-H.-Hamden.jpg" alt="Profile Picture" class="profile-picture">
     <img src="https://www.ispdnetwork.org/wp-content/uploads/2023/06/United-States.webp" alt="flag" class="flag-logo" width="30" height="30">
     <div class="name"><b>Dr. Raymond H. Hamden,</b><em class="title"> Ph.D. in Psychology Clinical, ISPD Group Expert and Consultant</em></div>
@@ -849,19 +568,8 @@ nav.primary-menu-wrapper a {
     <div class="social-links">
   <a href="https://www.linkedin.com/in/dr-raymond-h-hamden/" class="social-linkedin"><i class="fab fa-linkedin"></i></a>
     </div>
-  </section>  
-</div>
-</body>
-</html>
-<!DOCTYPE html>
-<html>
-<head>
-  <title> ISPD EXPERTS </title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-</head>
-<body>
-<div class="ispd-experts">
-  <section class="ispdexperts">
+  </section>
+<section class="ispdexperts">
     <img src="https://www.ispdnetwork.org/wp-content/uploads/2024/02/AZAHAR.png" alt="Profile Picture" class="profile-picture">
     <img src="https://www.ispdnetwork.org/wp-content/uploads/2023/06/Spain.webp" alt="flag" class="flag-logo" width="30" height="30">
     <div class="name"><b>Maria Belén Pérez-Minayo,</b> <em class="title"> LLB, MBA, Independent  Banker, ISPD Group Associate Banker</em></div>
@@ -881,7 +589,7 @@ nav.primary-menu-wrapper a {
   </div>
     </div>
   </section>
-  <section class="ispdexperts">
+<section class="ispdexperts">
     <img src="https://www.ispdnetwork.org/wp-content/uploads/2024/01/IMG_1565.jpeg" alt="Profile Picture" class="profile-picture">
     <img src="https://www.ispdnetwork.org/wp-content/uploads/2023/06/Portugal.webp" alt="flag" class="flag-logo" width="30" height="30">
     <div class="name"><b>Carlos Estima,</b><em class="title"> BSc, MBA, and ISPD Group Icon Banking Project Manager</em></div>
@@ -910,7 +618,7 @@ nav.primary-menu-wrapper a {
      <a href="https://www.linkedin.com/in/anny12anita/" class="social-linkedin"><i class="fab fa-linkedin"></i></a>
     </div>
   </section>
-  <section class="ispdexperts">
+<section class="ispdexperts">
     <img src="https://www.ispdnetwork.org/wp-content/uploads/2024/09/Anna-Buchanan.jpeg.jpg" alt="Profile Picture" class="profile-picture">
     <img src="https://www.ispdnetwork.org/wp-content/uploads/2023/07/Singapore.webp" alt="flag" class="flag-logo" width="30" height="30">
     <div class="name"><b>Anna Buchanan,</b> <em class="title">Finance and Commodities Business Development</em></div>
@@ -924,7 +632,7 @@ nav.primary-menu-wrapper a {
      <a href="https://www.linkedin.com/in/anna-buchanan-60116534/" class="social-linkedin"><i class="fab fa-linkedin"></i></a>
     </div>
   </section>
-  <section class="ispdexperts">
+<section class="ispdexperts">
     <img src="https://www.ispdnetwork.org/wp-content/uploads/2025/01/Mohamed-Al-Hadi.jpg" alt="Profile Picture" class="profile-picture">
     <img src="https://ispdnetwork.org/wp-content/uploads/2023/06/Oman.webp" alt="flag" class="flag-logo" width="30" height="30">
     <div class="name"><b>Mohamed Al Hadi,</b> <em class="title">Bsc</em></div>
@@ -943,7 +651,7 @@ nav.primary-menu-wrapper a {
      <a href="https://www.linkedin.com/in/mohamed-al-hadi-5015aa1b4/" class="social-linkedin"><i class="fab fa-linkedin"></i></a>
     </div>
   </section>
-  <section class="ispdexperts">
+<section class="ispdexperts">
     <img src="https://www.ispdnetwork.org/wp-content/uploads/2025/01/Ameet-D-Hirani.jpg" alt="Profile Picture" class="profile-picture">
     <img src="https://www.ispdnetwork.org/wp-content/uploads/2025/01/United-Kingdom-65x65-1.webp" alt="flag" class="uk-flag-logo" width="30" height="30"> <img src="https://www.ispdnetwork.org/wp-content/uploads/2024/09/India.png" alt="flag" class="india-flag-logo" width="30" height="30">
     <div class="name"><b>Ameet D Hirani,</b> <em class="title">BBA, Real Estate and Construction Corporation Shareholder, Contractor of the Emirates Towers Dubai,</em></div>
@@ -959,18 +667,7 @@ nav.primary-menu-wrapper a {
      <a href="https://www.linkedin.com/in/ameet-hirani-73076178/" class="social-linkedin"><i class="fab fa-linkedin"></i></a>
     </div>
   </section>
-</div>
-</body>
-</html>
-<!DOCTYPE html>
-<html>
-<head>
-  <title> ISPD EXPERTS </title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-</head>
-<body>
-<div class="ispd-experts">
-  <section class="ispdexperts">
+<section class="ispdexperts">
     <img src="https://www.ispdnetwork.org/wp-content/uploads/2025/01/Nawaf-Al-Ismaili.jpg" alt="Profile Picture" class="profile-picture">
     <img src="https://ispdnetwork.org/wp-content/uploads/2023/06/Oman.webp" alt="flag" class="flag-logo" width="30" height="30">
     <div class="name"><b>Nawaf Al Ismaili,</b> <em class="title">Finance and Operations Management</em></div>
@@ -981,7 +678,7 @@ nav.primary-menu-wrapper a {
      <p class="details">• Involved with project planning including providing quotes for past and potential projects.</p>
     
   </section>
-  <section class="ispdexperts">
+<section class="ispdexperts">
     <img src="https://www.ispdnetwork.org/wp-content/uploads/2025/01/Nabil-Al-Ismaili.jpg" alt="Profile Picture" class="profile-picture">
     <img src="https://ispdnetwork.org/wp-content/uploads/2023/06/Oman.webp" alt="flag" class="flag-logo" width="30" height="30">
     <div class="name"><b>Nabil Al Ismaili,</b> <em class="title">Human resources and Operations Manager</em></div>
@@ -992,7 +689,7 @@ nav.primary-menu-wrapper a {
      <p class="details">• Involved in project planning including providing manpower services for past and potential projects</p>
     
   </section>
-  <section class="ispdexperts">
+<section class="ispdexperts">
     <img src="https://www.ispdnetwork.org/wp-content/uploads/2025/01/Photo-scaled.jpg" alt="Profile Picture" class="profile-picture">
     <img src="https://www.ispdnetwork.org/wp-content/uploads/2025/02/Italy-65x65-1.webp" alt="flag" class="flag-logo" width="30" height="30">
     <div class="name"><b>Lorenzo Butelli,</b> <em class="title"></em></div>
@@ -1009,7 +706,7 @@ nav.primary-menu-wrapper a {
 plants and unified certification</p>
     
   </section>
-  <section class="ispdexperts">
+<section class="ispdexperts">
     <img src="https://www.ispdnetwork.org/wp-content/uploads/2025/02/Bruno-Soller.jpg" alt="Profile Picture" class="profile-picture">
     <img src="https://www.ispdnetwork.org/wp-content/uploads/2025/02/Brazil-Flag-65x65-1.webp" alt="flag" class="flag-logo" width="30" height="30">
     <div class="name"><b>Bruno Soller,</b> <em class="title"></em></div>
@@ -1024,6 +721,6 @@ plants and unified certification</p>
      <p class="details">• Political Commentator of Rede Record Media Group</p> <p class="details">• RealTime Big Data Partner</p>
      <p class="details">• Political strategist of several mayors, governors, and senators</p>
   </section>
-</div>
+  </div>
 </body>
 </html>
